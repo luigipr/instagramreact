@@ -1,23 +1,28 @@
-obj = [
+let obj = [
     {
         imagemuser: "assets/img/meowed.svg",
         altuser: 'meowed' ,
         imagempost: "assets/img/gato-telefone.svg" ,
         altpost: 'gato-telefone' ,
-        imgliked: "assets/img/respondeai.svg",
-        nomeliked: 'respondeai'
+        imagemliked: "assets/img/respondeai.svg",
+        nomeliked: 'respondeai',
+        liked: '101.523',
+        key: 1
     }, {
         imagemuser: "assets/img/barked.svg",
         altuser: 'barked' ,
         imagempost: "assets/img/dog.svg" ,
         altpost: 'dog' ,
         imagemliked: "assets/img/adorable_animals.svg",
-        nomeliked: 'adorable_animals'
+        nomeliked: 'adorable_animals',
+        liked: '101.523',
+        key: 2
     }
 
 ]
 
 function Post(props) {
+    console.log(props)
     return (
         <div class="post">
             <div class="topo">
@@ -31,7 +36,7 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-            <img src={props.imagempost} alt={altpost}/>
+            <img src={props.imagempost} alt={props.altpost}/>
             </div>
 
             <div class="fundo">
@@ -47,9 +52,9 @@ function Post(props) {
             </div>
 
             <div class="curtidas">
-                <img src={imagemliked} alt={nomeliked}/>
+                <img src={props.magemliked} alt={props.nomeliked}/>
                 <div class="texto">
-                    Curtido por <strong>{nomeliked}</strong> e <strong>outras 101.523 pessoas</strong>
+                    Curtido por <strong>{props.nomeliked}</strong> e <strong>outras {props.liked} pessoas</strong>
                 </div>
             </div>
             </div>
@@ -58,11 +63,13 @@ function Post(props) {
 }
 
 export default function Posts() {
+    return (
     <div class="posts">
         {obj.map((i) => {
-        return <Post imagemuser={i.imagemuser} altuser={i.altuser} imagempost={i.imagempost} altpost={i.altpost} imagemliked={i.imagemliked} nomeliked={i.nomeliked} />
+        return <Post key='i' imagemuser={i.imagemuser} altuser={i.altuser} imagempost={i.imagempost} altpost={i.altpost} imagemliked={i.imagemliked} nomeliked={i.nomeliked} />
     })} 
     </div>
+    )
 }
 
 
@@ -77,4 +84,3 @@ export default function Posts() {
 
 
 
-<

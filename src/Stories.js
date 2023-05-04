@@ -1,5 +1,5 @@
 let obj = [
-    { imagem :"assets/img/9gag.svg",nome: '9gag'},
+    { imagem :"../assets/img/9gag.svg",nome: '9gag'},
     { imagem: "assets/img/meowed.svg", nome: 'meowed'},
     { imagem: "assets/img/barked.svg", nome: 'barked'},
     { imagem: "assets/img/nathanwpylestrangeplanet.svg", nome: 'nathanwpylestrangeplanet'},
@@ -12,8 +12,9 @@ let obj = [
 
 
 function Story(props) {
+    console.log(props)
     return (
-    <div class="story">
+    <div class="story" >
         <div class="imagem">
             <img src={props.imagem} alt={props.nome}/>
         </div>
@@ -26,10 +27,11 @@ function Story(props) {
 
 
 export default function Stories() {
+    
     return (
-    <div class="stories">
+    <div class="stories" >
     {obj.map((i) => {
-        return <Story imagem={i.imagem} nome={i.nome} />
+        return <Story key="{i}" imagem={i.imagem} nome={i.nome} />
     })} 
     <div class="setinha">
     <ion-icon name="chevron-forward-circle"></ion-icon>

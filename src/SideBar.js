@@ -1,17 +1,24 @@
-import ReactDOM from 'react-dom'
+
+import Suggestions from './Suggestions'
+import User from './User'
 
 
-
-export default function sidebar() {
+export default function SideBar() {
+return (
 <div class="sidebar">
-    <div class="usuario">
-        <img src="assets/img/catanacomics.svg" alt="imagem de perfil"/>
-        <div class="texto">
-            <span>
-                <strong>catanacomics</strong>
-                <ion-icon name="pencil"></ion-icon>
-            </span>
+    
+    <User /> 
+
+    <Suggestions />
+
+    <div class="links">
+          Sobre • Ajuda • Imprensa • API • Carreiras • Privacidade • Termos • Localizações • Contas mais relevantes •
+          Hashtags • Idioma
         </div>
-    </div>
-</div>   
+
+        <div class="copyright">
+          © 2021 INSTAGRAM DO FACEBOOK
+        </div>
+</div> 
+)  
     }

@@ -1,7 +1,7 @@
-import ReactDOM from 'react-dom'
 
 
-export default function navbar() {
+export default function Navbar() {
+    return (
     <div class="navbar">
         <div class="container">
             <div class="logo">
@@ -26,7 +26,5 @@ export default function navbar() {
             </div>
         </div>
   </div>
-
-
-
+)
 }
