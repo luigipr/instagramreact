@@ -75,7 +75,7 @@ function Post(props) {
         <div class="post" data-test='post'>
             <div class="topo">
             <div class="usuario">
-                <img data-test='post-image' src={props.imagemuser} alt={props.altuser}/>
+                <img data-test='post-image' src={props.imagemuser} alt={props.altuser} onClick={() => likecount(props.index)}/>
                 {props.altuser}
             </div>
             <div class="acoes">
@@ -84,7 +84,7 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-            <img src={props.imagempost} alt={props.altpost}/>
+            <img src={props.imagempost} alt={props.altpost} data-test='post-image' onClick={() => likecount(props.index)}/>
             </div>
 
             <div class="fundo">
