@@ -5,7 +5,7 @@ export default function App() {
     return (
     <div class="root">
         <Navbar />
-        <Body />
+        <Body /> 
 
         </div>
     )

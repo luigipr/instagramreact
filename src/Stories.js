@@ -1,5 +1,5 @@
 let obj = [
-    { imagem :"../assets/img/9gag.svg",nome: '9gag'},
+    { imagem :"assets/img/9gag.svg",nome: '9gag'},
     { imagem: "assets/img/meowed.svg", nome: 'meowed'},
     { imagem: "assets/img/barked.svg", nome: 'barked'},
     { imagem: "assets/img/nathanwpylestrangeplanet.svg", nome: 'nathanwpylestrangeplanet'},

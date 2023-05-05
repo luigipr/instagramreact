@@ -116,7 +116,7 @@
     align-items: center;
     height: 66px;
     width: 66px;
-    background-image: url('../assets/img/story-circle.svg');
+    background-image: url('../public/assets/img/story-circle.svg');
     
   }
   
@@ -304,4 +304,13 @@
     padding-top: 5px;
     color: black;
   }
-  
+  .usuario img {
+    border-radius: 50%;
+  }
+
+  .branco {
+    background-color: white;
+  }
+  .vermelho {
+    color: red;
+  }
