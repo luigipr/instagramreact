@@ -69,11 +69,18 @@ function Post(props) {
         //     }
         //   };
 
-        // } else {
-        //     setClasselike('branco')
-        //     setLike("heart-outline")
-        //     setlikes(likes-1)
-        // }
+         else {
+            setClasselike('branco')
+            setLike("heart-outline")
+            setlikes(likes-1)
+        }
+    }
+    function likecount2 (index) {
+        if (classelike === 'branco') {
+            setClasselike('vermelho');
+            setLike("heart");
+            setlikes(likes+1);
+        }
     }
 
 
@@ -81,7 +88,7 @@ function Post(props) {
         <div class="post" data-test='post'>
             <div class="topo">
             <div class="usuario">
-                <img data-test='post-image' src={props.imagemuser} alt={props.altuser} onClick={() => likecount(props.index)}/>
+                <img data-test='post-image' src={props.imagemuser} alt={props.altuser} onClick={() => likecount2(props.index)}/>
                 {props.altuser}
             </div>
             <div class="acoes">
@@ -90,7 +97,7 @@ function Post(props) {
             </div>
 
             <div class="conteudo">
-            <img src={props.imagempost} alt={props.altpost} data-test='post-image' onClick={() => likecount(props.index)}/>
+            <img src={props.imagempost} alt={props.altpost} data-test='post-image' onClick={() => likecount2(props.index)}/>
             </div>
 
             <div class="fundo">
