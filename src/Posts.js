@@ -31,7 +31,7 @@ let obj = [
     }
 
 
-]
+];
 
 
 function Post(props) {
@@ -44,30 +44,36 @@ function Post(props) {
     
 
         if (classesalvar === "bookmark-outline") {
-            setClassesalvar("bookmark")
+            setClassesalvar("bookmark");
         } else {
-            setClassesalvar("bookmark-outline")
+            setClassesalvar("bookmark-outline");
         }
     }
 
-    let [classelike, setClasselike] = useState('branco')
-    let [like, setLike] = useState("heart-outline")
-    let [likes, setlikes] = useState(props.likes)
+    let [classelike, setClasselike] = useState('branco');
+    let [like, setLike] = useState("heart-outline");
+    let [likes, setlikes] = useState(props.likes);
 
     function likecount (index) {
         console.log(index);
         if (classelike === 'branco') {
-            setClasselike('vermelho')
-            setLike("heart")
-            setlikes(likes+1)
-
-
-        } else {
-            setClasselike('branco')
-            setLike("heart-outline")
-            setlikes(likes-1)
+            setClasselike('vermelho');
+            setLike("heart");
+            setlikes(likes+1);
         }
+        // const handleClick = event => {
+        //     if (event.detail === 2) {
+        //         setClasselike('vermelho')
+        //         setLike("heart")
+        //         setlikes(likes+1)
+        //     }
+        //   };
 
+        // } else {
+        //     setClasselike('branco')
+        //     setLike("heart-outline")
+        //     setlikes(likes-1)
+        // }
     }
 
 
@@ -117,7 +123,7 @@ export default function Posts() {
     return <Post key='i' imagemuser={i.imagemuser} altuser={i.altuser} imagempost={i.imagempost} altpost={i.altpost} imagemliked={i.imagemliked} nomeliked={i.nomeliked} likes={i.likes} index={index} />
     })} 
     </div>
-    )
+    );
 }
 
 
