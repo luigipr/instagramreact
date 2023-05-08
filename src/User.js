@@ -24,12 +24,12 @@ export default function User() {
 
 
     return (
-        <div class="usuario">
+        <div className="usuario">
         <img src={imagem} alt="imagem de perfil" data-test="profile-image" onClick={novafoto} />
-        <div class="texto">
+        <div className="texto">
             <span>
                 <strong data-test='name'>{name}</strong>
-                <ion-icon name="pencil" class='username' data-test='edit-name' onClick={novonome}></ion-icon>
+                <ion-icon name="pencil" className='username' data-test='edit-name' onClick={novonome}></ion-icon>
             </span>
         </div>
     </div>

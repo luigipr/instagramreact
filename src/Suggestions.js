@@ -31,24 +31,24 @@ let obj = [{
 
 function Suggestion(props) {
     return (
-        <div class="sugestao">
-            <div class="usuario">
+        <div className="sugestao">
+            <div className="usuario">
               <img src={props.imagem} alt={props.nome}/>
-              <div class="texto">
-                <div class="nome">bad.vibes.memes</div>
-                <div class="razao">{props.razao}</div>
+              <div className="texto">
+                <div className="nome">bad.vibes.memes</div>
+                <div className="razao">{props.razao}</div>
               </div>
             </div>
-            <div class="seguir">Seguir</div>
+            <div className="seguir">Seguir</div>
         </div>
     )
 }
 
 export default function Suggestions() {
     return (
-    <div class="sugestoes">
+    <div className="sugestoes">
         {obj.map((i) => {
-        return <Suggestion key="{i}" imagem={i.imagem} nome={i.nome} razao={i.razao}/>
+        return <Suggestion key={i.nome} imagem={i.imagem} nome={i.nome} razao={i.razao}/>
     })} 
     </div>
     )

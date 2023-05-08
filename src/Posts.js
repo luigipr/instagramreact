@@ -34,6 +34,7 @@ let obj = [
 ];
 
 
+
 function Post(props) {
 
 
@@ -54,6 +55,7 @@ function Post(props) {
     let [like, setLike] = useState("heart-outline");
     let [likes, setlikes] = useState(props.likes);
 
+
     function likecount (index) {
         console.log(index);
         if (classelike === 'branco') {
@@ -70,9 +72,9 @@ function Post(props) {
         //   };
 
          else {
-            setClasselike('branco')
-            setLike("heart-outline")
-            setlikes(likes-1)
+            setClasselike('branco');
+            setLike("heart-outline");
+            setlikes(likes-1);
         }
     }
     function likecount2 (index) {
@@ -85,23 +87,23 @@ function Post(props) {
 
 
     return (
-        <div class="post" data-test='post'>
-            <div class="topo">
-            <div class="usuario">
+        <div className="post" data-test='post'>
+            <div className="topo">
+            <div className="usuario">
                 <img data-test='post-image' src={props.imagemuser} alt={props.altuser} onClick={() => likecount2(props.index)}/>
                 {props.altuser}
             </div>
-            <div class="acoes">
+            <div className="acoes">
                 <ion-icon name="ellipsis-horizontal"></ion-icon>
             </div>
             </div>
 
-            <div class="conteudo">
-            <img src={props.imagempost} alt={props.altpost} data-test='post-image' onClick={() => likecount2(props.index)}/>
+            <div className="conteudo">
+            <img src={props.imagempost} alt={props.altpost} data-test='post-image' onDoubleClick={() => likecount2(props.index)}/>
             </div>
 
-            <div class="fundo">
-            <div class="acoes">
+            <div className="fundo">
+            <div className="acoes">
                 <div>
                 <ion-icon name={like} data-test='like-post' onClick={() => likecount(props.index)} class={classelike}></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
@@ -112,9 +114,9 @@ function Post(props) {
                 </div>
             </div>
 
-            <div class="curtidas">
+            <div className="curtidas">
                 <img src={props.imagemliked} alt={props.nomeliked}/>
-                <div class="texto">
+                <div className="texto">
                     Curtido por <strong>{props.nomeliked}</strong> e <strong>outras <span data-test='likes-number'>{likes}</span> pessoas</strong>
                 </div>
             </div>
@@ -125,9 +127,9 @@ function Post(props) {
 
 export default function Posts() {
     return (
-    <div class="posts">
+    <div className="posts">
         {obj.map((i, index) => {
-    return <Post key='i' imagemuser={i.imagemuser} altuser={i.altuser} imagempost={i.imagempost} altpost={i.altpost} imagemliked={i.imagemliked} nomeliked={i.nomeliked} likes={i.likes} index={index} />
+    return <Post key={i.altpost} imagemuser={i.imagemuser} altuser={i.altuser} imagempost={i.imagempost} altpost={i.altpost} imagemliked={i.imagemliked} nomeliked={i.nomeliked} likes={i.likes} index={index} />
     })} 
     </div>
     );
